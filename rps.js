@@ -1,3 +1,7 @@
+let computerwins = 0;
+let playerwins = 0;
+let ties = 0;
+
 function computerPlay() {
     let ranNum = Math.random();
     let computerPlay =""
@@ -65,3 +69,77 @@ function game(){
         return alert (`player wins ${playerCount} to ${computerCount}, ${5-computerCount-playerCount} ties `);
     };
 }
+
+function playRoundRock(playerSelection, computerSelection) {
+    computerSelection = computerPlay() 
+    playerSelection = "rock"
+    switch(playerSelection.toLowerCase()){
+    case computerSelection:
+        alert("it's a tie")
+        ties += 1;
+        document.getElementById('ties').innerText = ties
+        return 1
+        break;
+    case "rock":
+        if (computerSelection == "paper"){
+            alert(`computer wins, ${computerSelection} beats ${playerSelection}`);
+            computerwins += 1
+            document.getElementById('computerwins').innerText = computerwins
+            return 0;
+        }else {
+            alert(`player wins, ${playerSelection} beats ${computerSelection}`);
+            playerwins +=1
+            document.getElementById('playerwins').innerText = playerwins
+            return 2;
+        }break;
+    }
+  }
+function playRoundPaper(playerSelection, computerSelection) {
+    computerSelection = computerPlay() 
+    playerSelection = "paper"
+    switch(playerSelection.toLowerCase()){
+    case computerSelection:
+        alert("it's a tie")
+        ties += 1;
+        document.getElementById('ties').innerText = ties
+        return 1
+        break;
+    case "paper":
+        if (computerSelection == "scissors"){
+            alert(`computer wins, ${computerSelection} beats ${playerSelection}`);
+            computerwins +=1
+            document.getElementById('computerwins').innerText = computerwins
+            return 0
+        }else {
+            alert(`player wins, ${playerSelection} beats ${computerSelection}`);
+            playerwins +=1
+            document.getElementById('playerwins').innerText = playerwins
+            return 2;
+        }break;
+    }
+  }
+  function playRoundScissors(playerSelection, computerSelection) {
+    computerSelection = computerPlay() 
+    playerSelection = "scissors"
+    switch(playerSelection.toLowerCase()){
+    case computerSelection:
+        alert("it's a tie")
+        ties += 1
+        document.getElementById('ties').innerText = ties
+        return 1
+        break;
+    case "scissors":
+         if (computerSelection == "rock"){
+            alert(`computer wins, ${computerSelection} beats ${playerSelection}`)
+            computerwins += 1
+            document.getElementById('computerwins').innerText = computerwins
+            return 0;
+        }else {
+            alert(`player wins, ${playerSelection} beats ${computerSelection}`);
+            playerwins += 1
+            document.getElementById('playerwins').innerText = playerwins
+            return 2
+        }break;
+    }
+  }
+  
