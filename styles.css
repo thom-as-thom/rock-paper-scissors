@@ -1,0 +1,50 @@
+:root{
+    --main: #4dbfec;
+    --high: #a3d8ec;
+    --attention: #e78330;
+    --highAttention: #f0b484;
+};
+html{
+    background: var(--high);
+}
+body{
+background: var(--main); 
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+.buttonDiv{
+    background:var(--high);
+    color: rgb(2, 0, 0);
+    font-weight: bolder;
+    text-align: center;
+    margin: 1em;
+    padding: 10em;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--high);
+    border-width: thick;
+}
+.buttonDiv:hover{
+    cursor:pointer;
+    border-color: var(--highAttention);
+
+}
+.scores{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background:var(--high);
+    margin: 1em;
+    border-radius: 5px;
+}
+.prompt{
+    background:var(--highAttention);
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em;
+    font-size:large;
+    font-weight: bold;
+    text-align: center;
+}

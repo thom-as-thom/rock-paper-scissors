@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link href=styles.css rel="stylesheet">
     <title>rock paper scissors</title>
 
     
@@ -10,26 +10,31 @@
   <body>
 
     <div class="card">
-      <div class="card-header">
-        
-      </div>
+      
       <div class="card-body">
-        <h5 class="card-title">let's play rock,  paper, scissors!</h5>
-        <p class="card-text">touch any button to start playing</p>
-        <div class="container">
-          <button class="btn-primary" onclick="playRoundRock()">rock</button>
-              <button class="btn-primary" onclick="playRoundPaper()">paper</button>
-                  <button class="btn-primary" onclick="playRoundScissors()">scissors</button>
-                    </div>
+        <div class="prompt">
+          <p id="prompt"> press any button!</p>
+        </div>
+          <div class="container row">
+              <div class="buttonDiv" onclick="playRoundRock()">Rock</div>
+              <div class="buttonDiv" onclick="playRoundPaper()">Paper</div>
+              <div class="buttonDiv" onclick="playRoundScissors()">Scissors</div>
+          </div>
       </div>
     </div>
- <div class="container"> 
-   <p>player wins</p><br>
-   <p id="playerwins">0</p><br>
-   <p>computer wins</p><br>
-   <p id="computerwins">0</p><br>
-   <p>ties</p><br>
-   <p id="ties">0</p>
+    <div class="scores"> 
+      <div>
+        <p>player wins</p>
+        <p id="playerwins">0</p>     
+   </div>
+   <div>
+     <p>computer wins</p>
+     <p id="computerwins">0</p>
+   </div>
+   <div>
+     <p>ties</p>
+     <p id="ties">0</p>
+   </div>
 </div>
  
   </body>

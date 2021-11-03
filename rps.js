@@ -75,19 +75,19 @@ function playRoundRock(playerSelection, computerSelection) {
     playerSelection = "rock"
     switch(playerSelection.toLowerCase()){
     case computerSelection:
-        alert("it's a tie")
+        document.getElementById('prompt').innerText = "it's a tie"
         ties += 1;
         document.getElementById('ties').innerText = ties
         return 1
         break;
     case "rock":
         if (computerSelection == "paper"){
-            alert(`computer wins, ${computerSelection} beats ${playerSelection}`);
+            document.getElementById('prompt').innerText = `computer wins, ${computerSelection} beats ${playerSelection}`;
             computerwins += 1
             document.getElementById('computerwins').innerText = computerwins
             return 0;
         }else {
-            alert(`player wins, ${playerSelection} beats ${computerSelection}`);
+            document.getElementById('prompt').innerText = `player wins, ${playerSelection} beats ${computerSelection}`;
             playerwins +=1
             document.getElementById('playerwins').innerText = playerwins
             return 2;
@@ -99,19 +99,19 @@ function playRoundPaper(playerSelection, computerSelection) {
     playerSelection = "paper"
     switch(playerSelection.toLowerCase()){
     case computerSelection:
-        alert("it's a tie")
+        document.getElementById('prompt').innerText = "it's a tie"
         ties += 1;
         document.getElementById('ties').innerText = ties
         return 1
         break;
     case "paper":
         if (computerSelection == "scissors"){
-            alert(`computer wins, ${computerSelection} beats ${playerSelection}`);
+            document.getElementById('prompt').innerText = `computer wins, ${computerSelection} beats ${playerSelection}`;
             computerwins +=1
             document.getElementById('computerwins').innerText = computerwins
             return 0
         }else {
-            alert(`player wins, ${playerSelection} beats ${computerSelection}`);
+            document.getElementById('prompt').innerText = `player wins, ${playerSelection} beats ${computerSelection}`;
             playerwins +=1
             document.getElementById('playerwins').innerText = playerwins
             return 2;
@@ -123,19 +123,19 @@ function playRoundPaper(playerSelection, computerSelection) {
     playerSelection = "scissors"
     switch(playerSelection.toLowerCase()){
     case computerSelection:
-        alert("it's a tie")
+        document.getElementById('prompt').innerText = "it's a tie"
         ties += 1
         document.getElementById('ties').innerText = ties
         return 1
         break;
     case "scissors":
          if (computerSelection == "rock"){
-            alert(`computer wins, ${computerSelection} beats ${playerSelection}`)
+            document.getElementById('prompt').innerText = `computer wins, ${computerSelection} beats ${playerSelection}`
             computerwins += 1
             document.getElementById('computerwins').innerText = computerwins
             return 0;
         }else {
-            alert(`player wins, ${playerSelection} beats ${computerSelection}`);
+            document.getElementById('prompt').innerText = `player wins, ${playerSelection} beats ${computerSelection}`;
             playerwins += 1
             document.getElementById('playerwins').innerText = playerwins
             return 2
