@@ -30,11 +30,12 @@ background: var(--main);
 .buttonDiv:hover{
     cursor:pointer;
     border-color: var(--highAttention);
-
+    
 }
 .scores{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap:1em;
     background:var(--high);
     margin: 1em;
     border-radius: 5px;
@@ -47,4 +48,11 @@ background: var(--main);
     font-size:large;
     font-weight: bold;
     text-align: center;
+}
+@media (max-width: 800px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
 }
