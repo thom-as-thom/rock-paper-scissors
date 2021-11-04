@@ -6,9 +6,10 @@
 };
 html{
     background: var(--high);
-}
+    }
 body{
 background: var(--main); 
+font-size: 2rem;
 }
 .container{
     display: grid;
@@ -21,7 +22,7 @@ background: var(--main);
     font-weight: bolder;
     text-align: center;
     margin: 1em;
-    padding: 10em;
+    padding: 15%;
     border-radius: 5px;
     border-style: solid;
     border-color: var(--high);
@@ -36,23 +37,27 @@ background: var(--main);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap:1em;
-    background:var(--high);
     margin: 1em;
-    border-radius: 5px;
 }
 .prompt{
     background:var(--highAttention);
     border-radius: 5px;
     padding: 1em;
     margin: 1em;
-    font-size:large;
     font-weight: bold;
     text-align: center;
 }
-@media (max-width: 1920px){
+.score{
+    background:var(--high);
+    border-radius: 5px;
+    text-align: center;
+    
+}
+@media (orientation: portrait){
     .container{
         display: grid;
         grid-template-columns: 1fr;
+        
 
     }
 }
